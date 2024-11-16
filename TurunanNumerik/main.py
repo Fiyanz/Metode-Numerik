@@ -1,10 +1,11 @@
 import metode
-
+import fungsi
 
 if __name__ == "__main__":
 
-    h = 0.001
+    h = 0.00000000000001
     
-    for x in range(1, 30):
-        hasilTengah = metode.tengah(x, h)
-        print(f"Metode Tengengah index: {x}, Hasil: {hasilTengah}")
+    for x in range(1, 30 + 1):
+        hasilNumerik = metode.tengah(x, h)
+        hasilAnalitik = fungsi.fh(x)
+        print(f"Index: {x}, Hasil Analitik: {hasilAnalitik}, Hasil Numerik: {hasilNumerik}")

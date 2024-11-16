@@ -5,32 +5,41 @@ Metode Tururnan Analitik
     - Metode Tengah
 """
 
-from fungsi import f, fh
+from fungsi import f
 
 def maju(x: int, h: float) -> float:
     """
     Fungsi Tururnan Metode Maju
+
+    arg:
+        x: nilai x
+        h: error / galat
+    out:
+        x: float
     """
-    return (fh(x + h) - (fh(x))) / h
+    return (f(x + h) - (f(x))) / h
 
 def mundur(x: int, h: float) -> float:
     """
     Fungsi Tururnan Metode Mundur
+
+        arg:
+        x: nilai x
+        h: error / galat
+    out:
+        x: float
     """
-    return (fh(x) - fh(x - h)) / h
+    return (f(x) - f(x - h)) / h
 
 def tengah(x: int, h: float) -> float:
     """
     Fugnsi Tururnan Metode Tengah
-    """
-    return (fh(x + h) - fh(x - h)) / (2*h)
 
-def newtonRapshon() -> float:
+        arg:
+        x: nilai x
+        h: error / galat
+    out:
+        x: float
     """
-    Fungsi Non Linier Terbuka
-    """
-# if __name__ == "__main__":
-#     x, h = 2, 0.001
-#     print(f"Hasil Motode Maju: {maju(x, h)}")
-#     print(f"Hasil Metode Mundur: {mundur(x, h)}")
-#     print(f"Hasil Metode Tengah: {tengah(x, h)}")
+    return (f(x + h) - f(x - h)) / (2*h)
+
